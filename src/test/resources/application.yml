@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: companies_test
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/companies_test
+    username: companies_test
+    password: companies_test
+
+flyway:
+  table: schema_version
