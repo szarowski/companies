@@ -3,9 +3,9 @@ spring:
     name: companies_test
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/companies_test
-    username: companies_test
-    password: companies_test
+    url: jdbc:postgresql://ec2-50-19-232-205.compute-1.amazonaws.com:5432/d1vv0271nsbicb
+    username: npiygilkgbnust
+    password: f427adbf9c6c735b5f68d553d5cbb9f3c4372ba01e59f9ad6e6a1e7e801bf6d8
 
 flyway:
   table: schema_version
