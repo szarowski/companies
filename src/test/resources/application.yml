@@ -9,3 +9,6 @@ spring:
 
 flyway:
   table: schema_version
+
+server:
+  port: ${PORT:5000}
