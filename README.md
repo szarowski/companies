@@ -15,26 +15,43 @@ Add Beneficiary Owner to Company:   PUT    /v1/companies/<id>/add_beneficial_own
 ### Examples
 
 #### Create company:
-
+```
 curl -X POST http://localhost:8080/v1/companies -H "Content-Type: application/json" -d '{"company_id":"4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11","name":"Envisionworld Ltd.","address":"1 Canada square, Canary Wharf","city":"London","country":"United Kingdom","email":"rszarowski@envisionworld.co","phone":"+420123456789","beneficial_owners":["Roman Szarowski"]}'
+curl -X POST https://ancient-reef-15294.herokuapp.com/v1/companies -H "Content-Type: application/json" -d '{"company_id":"4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11","name":"Envisionworld Ltd.","address":"1 Canada square, Canary Wharf","city":"London","country":"United Kingdom","email":"rszarowski@envisionworld.co","phone":"+420123456789","beneficial_owners":["Roman Szarowski"]}'
+```
 
 #### Get company:
-
+```
 curl -X GET http://localhost:8080/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11
+curl -X GET https://ancient-reef-15294.herokuapp.com/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11
+```
 
 #### Update company with different beneficial owner:
-
+```
 curl -X PUT http://localhost:8080/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11 -H "Content-Type: application/json" -d '{"company_id":"4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11","name":"Envisionworld Ltd.","address":"1 Canada square, Canary Wharf","city":"London","country":"United Kingdom","email":"rszarowski@envisionworld.co","phone":"+420123456789","beneficial_owners":["Bashir Khairy"]}'
+curl -X PUT https://ancient-reef-15294.herokuapp.com/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11 -H "Content-Type: application/json" -d '{"company_id":"4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11","name":"Envisionworld Ltd.","address":"1 Canada square, Canary Wharf","city":"London","country":"United Kingdom","email":"rszarowski@envisionworld.co","phone":"+420123456789","beneficial_owners":["Bashir Khairy"]}'
+```
 
 #### List all companies:
-
+```
 curl -X GET http://localhost:8080/v1/companies
+curl -X GET https://ancient-reef-15294.herokuapp.com/v1/companies
+```
 
 #### Delete company:
-
+```
 curl -X DELETE http://localhost:8080/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11
+curl -X DELETE https://ancient-reef-15294.herokuapp.com/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11
+```
+
+#### Add Beneficiary Owner to Company
+```
+curl -X PUT http://localhost:8080/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11/add_beneficial_owner -H "Content-Type: application/json" -d '{"owner_name": "The guy who should never be here"}'
+curl -X PUT https://ancient-reef-15294.herokuapp.com/v1/companies/4ee3a8d8-ca7b-4290-a52c-dd5b6165ec11/add_beneficial_owner -H "Content-Type: application/json" -d '{"owner_name": "The guy who should never be here"}'
+```
 
 ## Requirements
+
 Installed Java 8+.
 Installed Gradle. 
 Installed PostgreSQL database.
